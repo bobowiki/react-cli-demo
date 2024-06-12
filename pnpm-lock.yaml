@@ -26,6 +26,9 @@ importers:
       '@types/fs-extra':
         specifier: ^11.0.4
         version: 11.0.4
+      '@types/prompts':
+        specifier: ^2.4.9
+        version: 2.4.9
       eslint:
         specifier: ^9.4.0
         version: 9.4.0
@@ -1091,6 +1094,12 @@ packages:
     resolution:
       {
         integrity: sha512-xyu6WAMVwv6AKFLB+e/7ySZVr/0zLCzOa7rSpq6jNwpqOrUbcACDWC+53d4n2QHOnDou0fbIsg8wZu/sxrnI4Q==,
+      }
+
+  '@types/prompts@2.4.9':
+    resolution:
+      {
+        integrity: sha512-qTxFi6Buiu8+50/+3DGIWLHM6QuWsEKugJnnP6iv2Mc4ncxE4A/OJkjuVOA+5X0X1S/nq5VJRa8Lu+nwcvbrKA==,
       }
 
   '@types/resolve@1.20.2':
@@ -4470,6 +4479,11 @@ snapshots:
   '@types/node@20.14.2':
     dependencies:
       undici-types: 5.26.5
+
+  '@types/prompts@2.4.9':
+    dependencies:
+      '@types/node': 20.14.2
+      kleur: 3.0.3
 
   '@types/resolve@1.20.2': {}
 
