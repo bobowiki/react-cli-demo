@@ -1,25 +1,26 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "target": "ES2018",
+    "lib": ["ESNext", "DOM"],
     "module": "ESNext",
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-
-    /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    // 设置了该项会导致报错"*"表示任何路径，而node_modules表示node_modules的路径
+    // 所以会导致tsup中的"fs"会被映射到"node_modules/fs"而不是"fs"。
+    "paths": {
+      //   "*": ["node_modules/*"],
+      //   "fs": ["node_modules/@types/node/fs"]
+    }
+  }
+  //   "include": ["src/**/*"],
+  //   "exclude": ["node_modules"]
 }

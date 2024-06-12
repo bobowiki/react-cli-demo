@@ -1,5 +1,5 @@
-import { Layout } from "@arco-design/web-react";
-import { Outlet } from "react-router-dom";
+import { Layout } from '@arco-design/web-react';
+import { Outlet } from 'react-router-dom';
 const Header = Layout.Header;
 const Footer = Layout.Footer;
 const Content = Layout.Content;
